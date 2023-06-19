@@ -26,7 +26,7 @@ export default class App extends Component {
             <Route exact path="/AddCandidate" component={AddCandidate} />
             <Route exact path="/Voting" component={Voting} />
             <Route exact path="/Results" component={Results} />
-            <Route exact path="/Registration" component={Registration} />
+           //* <Route exact path="/Registration" component={Registration} /> **//
             <Route exact path="/Verification" component={Verification} />
             <Route exact path="/test" component={test} />
             <Route exact path="*" component={NotFound} />

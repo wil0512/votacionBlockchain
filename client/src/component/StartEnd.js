@@ -25,9 +25,9 @@ const StartEnd = (props) => {
                 className="container-item attention"
                 style={{ display: "block" }}
               >
-                <h2>Do not forget to add candidates.</h2>
+                <h2>No olvidar agregar candidatos</h2>
                 <p>
-                  Go to{" "}
+                  Ir a pagina:{" "}
                   <Link
                     title="Add a new "
                     to="/addCandidate"
@@ -36,14 +36,13 @@ const StartEnd = (props) => {
                       textDecoration: "underline",
                     }}
                   >
-                    add candidates
+                    Agregar Candidatos
                   </Link>{" "}
-                  page.
                 </p>
               </div>
               <div className="container-item">
                 <button type="submit" style={btn}>
-                  Start Election {props.elEnded ? "Again" : null}
+                  Iniciar Eleccion {props.elEnded ? "Again" : null}
                 </button>
               </div>
             </>

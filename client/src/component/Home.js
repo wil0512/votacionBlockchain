@@ -129,14 +129,14 @@ export default class Home extends Component {
         {this.state.isAdmin ? <NavbarAdmin /> : <Navbar />}
         <div className="container-main">
           <div className="container-item center-items info">
-            Your Account: {this.state.account}
+            Cuenta en uso: {this.state.account}
           </div>
           {!this.state.elStarted & !this.state.elEnded ? (
             <div className="container-item info">
               <center>
-                <h3>The election has not been initialize.</h3>
+                <h3>Eleccion no inicializada</h3>
                 {this.state.isAdmin ? (
-                  <p>Set up the election.</p>
+                  <p>Configure la eleccion</p>
                 ) : (
                   <p>Please wait..</p>
                 )}
@@ -196,16 +196,16 @@ export default class Home extends Component {
               <div className="container-main">
                 {/* about-admin */}
                 <div className="about-admin">
-                  <h3>About Admin</h3>
+                  <h3>AcercaDelAdministrador</h3>
                   <div className="container-item center-items">
                     <div>
                       <label className="label-home">
-                        Full Name{" "}
+                        Nombre Completo{" "}
                         {errors.adminFName && <EMsg msg="*required" />}
                         <input
                           className="input-home"
                           type="text"
-                          placeholder="First Name"
+                          placeholder="Nombre"
                           {...register("adminFName", {
                             required: true,
                           })}
@@ -213,19 +213,19 @@ export default class Home extends Component {
                         <input
                           className="input-home"
                           type="text"
-                          placeholder="Last Name"
+                          placeholder="Apellido"
                           {...register("adminLName")}
                         />
                       </label>
 
                       <label className="label-home">
-                        Email{" "}
+                        Correo{" "}
                         {errors.adminEmail && (
                           <EMsg msg={errors.adminEmail.message} />
                         )}
                         <input
                           className="input-home"
-                          placeholder="eg. you@example.com"
+                          placeholder="you@ejemplo.com"
                           name="adminEmail"
                           {...register("adminEmail", {
                             required: "*Required",
@@ -238,12 +238,12 @@ export default class Home extends Component {
                       </label>
 
                       <label className="label-home">
-                        Job Title or Position{" "}
+                        PuestoDeTrabajo {" "}
                         {errors.adminTitle && <EMsg msg="*required" />}
                         <input
                           className="input-home"
                           type="text"
-                          placeholder="eg. HR Head "
+                          placeholder="Ejemplo:Gerente"
                           {...register("adminTitle", {
                             required: true,
                           })}
@@ -254,28 +254,28 @@ export default class Home extends Component {
                 </div>
                 {/* about-election */}
                 <div className="about-election">
-                  <h3>About Election</h3>
+                  <h3>Configurar Eleccion</h3>
                   <div className="container-item center-items">
                     <div>
                       <label className="label-home">
-                        Election Title{" "}
+                        Titulo Eleccion{" "}
                         {errors.electionTitle && <EMsg msg="*required" />}
                         <input
                           className="input-home"
                           type="text"
-                          placeholder="eg. School Election"
+                          placeholder="Ejemplo:Eleccion Universitaria"
                           {...register("electionTitle", {
                             required: true,
                           })}
                         />
                       </label>
                       <label className="label-home">
-                        Organization Name{" "}
+                        Nombre de Organizacion{" "}
                         {errors.organizationName && <EMsg msg="*required" />}
                         <input
                           className="input-home"
                           type="text"
-                          placeholder="eg. Lifeline Academy"
+                          placeholder="Ejemplo: UMSS"
                           {...register("organizationTitle", {
                             required: true,
                           })}

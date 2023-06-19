@@ -180,14 +180,14 @@ export default class Registration extends Component {
       <>
         <NavbarAdmin />
         <div className="container-main">
-          <h3>Verification</h3>
-          <small>Total Voters: {this.state.voters.length}</small>
+          <h3>Verificacion</h3>
+          <small>Total Votantes: {this.state.voters.length}</small>
           {this.state.voters.length < 1 ? (
-            <div className="container-item info">None has registered yet.</div>
+            <div className="container-item info">Nadie se ha reistrado aun</div>
           ) : (
             <>
               <div className="container-item info">
-                <center>List of registered voters</center>
+                <center>Lista de votantes registrados</center>
               </div>
               {this.state.voters.map(this.renderUnverifiedVoters)}
             </>

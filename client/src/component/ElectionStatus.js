@@ -20,10 +20,10 @@ const ElectionStatus = (props) => {
       className="container-main"
       style={{ borderTop: "1px solid", marginTop: "0px" }}
     >
-      <h3>Election Status</h3>
+      <h3>Estado de Eleccion</h3>
       <div style={electionStatus}>
-        <p>Started: {props.elStarted ? "True" : "False"}</p>
-        <p>Ended: {props.elEnded ? "True" : "False"}</p>
+        <p>Iniciada: {props.elStarted ? "True" : "False"}</p>
+        <p>Finalizada: {props.elEnded ? "True" : "False"}</p>
       </div>
       <div className="container-item" />
     </div>

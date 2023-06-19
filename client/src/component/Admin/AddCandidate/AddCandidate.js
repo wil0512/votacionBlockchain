@@ -121,16 +121,16 @@ export default class AddCandidate extends Component {
       <>
         <NavbarAdmin />
         <div className="container-main">
-          <h2>Add a new candidate</h2>
-          <small>Total candidates: {this.state.candidateCount}</small>
+          <h2>Agregar Nuevo Candidato</h2>
+          <small>Total candidatos: {this.state.candidateCount}</small>
           <div className="container-item">
             <form className="form">
               <label className={"label-ac"}>
-                Header
+                Nombre Sigla
                 <input
                   className={"input-ac"}
                   type="text"
-                  placeholder="eg. Marcus"
+                  placeholder=" "
                   value={this.state.header}
                   onChange={this.updateHeader}
                 />
@@ -140,7 +140,7 @@ export default class AddCandidate extends Component {
                 <input
                   className={"input-ac"}
                   type="text"
-                  placeholder="eg. It is what it is"
+                  placeholder=""
                   value={this.state.slogan}
                   onChange={this.updateSlogan}
                 />
@@ -183,11 +183,11 @@ export function loadAdded(candidates) {
   return (
     <div className="container-main" style={{ borderTop: "1px solid" }}>
       <div className="container-item info">
-        <center>Candidates List</center>
+        <center>Lista Candidatos</center>
       </div>
       {candidates.length < 1 ? (
         <div className="container-item alert">
-          <center>No candidates added.</center>
+          <center>No hay candidatos agregados.</center>
         </div>
       ) : (
         <div
