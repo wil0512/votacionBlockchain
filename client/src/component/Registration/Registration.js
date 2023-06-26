@@ -155,16 +155,16 @@ export default class Registration extends Component {
         ) : (
           <>
             <div className="container-item info">
-              <p>Total registered voters: {this.state.voters.length}</p>
+              <p>Total votantes registrados: {this.state.voters.length}</p>
             </div>
             <div className="container-main">
-              <h3>Registration</h3>
-              <small>Register to vote.</small>
+              <h3>Registro</h3>
+              <small>Registrese para votar.</small>
               <div className="container-item">
                 <form>
                   <div className="div-li">
                     <label className={"label-r"}>
-                      Account Address
+                    DireccionBilletera-E
                       <input
                         className={"input-r"}
                         type="text"
@@ -175,11 +175,11 @@ export default class Registration extends Component {
                   </div>
                   <div className="div-li">
                     <label className={"label-r"}>
-                      Name
+                      Nombre Completo
                       <input
                         className={"input-r"}
                         type="text"
-                        placeholder="eg. Ava"
+                        placeholder="Ej. Ana Perez"
                         value={this.state.voterName}
                         onChange={this.updateVoterName}
                       />{" "}
@@ -187,34 +187,31 @@ export default class Registration extends Component {
                   </div>
                   <div className="div-li">
                     <label className={"label-r"}>
-                      Phone number <span style={{ color: "tomato" }}>*</span>
+                      Telefono <span style={{ color: "tomato" }}>*</span>
                       <input
                         className={"input-r"}
                         type="number"
-                        placeholder="eg. 9841234567"
+                        placeholder="Ej: 59177777777"
                         value={this.state.voterPhone}
                         onChange={this.updateVoterPhone}
                       />
                     </label>
                   </div>
                   <p className="note">
-                    <span style={{ color: "tomato" }}> Note: </span>
-                    <br /> Make sure your account address and Phone number are
-                    correct. <br /> Admin might not approve your account if the
-                    provided Phone number nub does not matches the account
-                    address registered in admins catalogue.
+                    <span style={{ color: "tomato" }}> Aviso: </span>
+                    <br /> Verifique que su Direccion de Billetera Electronica, Nombre Completo y Numero de telefono sean correctos.<br />
                   </p>
                   <button
                     className="btn-add"
                     disabled={
-                      this.state.voterPhone.length !== 10 ||
+                      this.state.voterPhone.length !== 11 ||
                       this.state.currentVoter.isVerified
                     }
                     onClick={this.registerAsVoter}
                   >
                     {this.state.currentVoter.isRegistered
-                      ? "Update"
-                      : "Register"}
+                      ? "Actualizar"
+                      : "Registrar"}
                   </button>
                 </form>
               </div>
@@ -253,34 +250,34 @@ export function loadCurrentVoter(voter, isRegistered) {
       <div
         className={"container-item " + (isRegistered ? "success" : "attention")}
       >
-        <center>Your Registered Info</center>
+        <center>Informacion de Registro</center>
       </div>
       <div
         className={"container-list " + (isRegistered ? "success" : "attention")}
       >
         <table>
           <tr>
-            <th>Account Address</th>
+            <th>DireccionBilletera-E</th>
             <td>{voter.address}</td>
           </tr>
           <tr>
-            <th>Name</th>
+            <th>Nombre</th>
             <td>{voter.name}</td>
           </tr>
           <tr>
-            <th>Phone</th>
+            <th>Telefono</th>
             <td>{voter.phone}</td>
           </tr>
           <tr>
-            <th>Voted</th>
+            <th>EstadoVoto</th>
             <td>{voter.hasVoted ? "True" : "False"}</td>
           </tr>
           <tr>
-            <th>Verification</th>
+            <th>Verificacion</th>
             <td>{voter.isVerified ? "True" : "False"}</td>
           </tr>
           <tr>
-            <th>Registered</th>
+            <th>Registrado</th>
             <td>{voter.isRegistered ? "True" : "False"}</td>
           </tr>
         </table>
@@ -295,27 +292,27 @@ export function loadAllVoters(voters) {
         <div className="container-list success">
           <table>
             <tr>
-              <th>Account address</th>
+              <th>DireccionBilletera-E</th>
               <td>{voter.address}</td>
             </tr>
             <tr>
-              <th>Name</th>
+              <th>NombreCompleto</th>
               <td>{voter.name}</td>
             </tr>
             <tr>
-              <th>Phone</th>
+              <th>Telefono</th>
               <td>{voter.phone}</td>
             </tr>
             <tr>
-              <th>Voted</th>
+              <th>EstadoVoto</th>
               <td>{voter.hasVoted ? "True" : "False"}</td>
             </tr>
             <tr>
-              <th>Verified</th>
+              <th>Verificacion</th>
               <td>{voter.isVerified ? "True" : "False"}</td>
             </tr>
             <tr>
-              <th>Registered</th>
+              <th>Registro</th>
               <td>{voter.isRegistered ? "True" : "False"}</td>
             </tr>
           </table>
@@ -326,7 +323,7 @@ export function loadAllVoters(voters) {
   return (
     <>
       <div className="container-item success">
-        <center>List of voters</center>
+        <center>Lista de votantes</center>
       </div>
       {voters.map(renderAllVoters)}
     </>

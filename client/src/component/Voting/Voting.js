@@ -128,7 +128,7 @@ export default class Voting extends Component {
     };
     const confirmVote = (id, header) => {
       var r = window.confirm(
-        "Vote for " + header + " with Id " + id + ".\nAre you sure?"
+        "Voto para " + header + " con Id " + id + ".\nEsta usted seguro?"
       );
       if (r === true) {
         castVote(id);
@@ -152,7 +152,7 @@ export default class Voting extends Component {
               this.state.currentVoter.hasVoted
             }
           >
-            Vote
+            Votar
           </button>
         </div>
       </div>
@@ -182,7 +182,7 @@ export default class Voting extends Component {
                   this.state.currentVoter.hasVoted ? (
                     <div className="container-item success">
                       <div>
-                        <strong>You've casted your vote.</strong>
+                        <strong>Usted ha emitido su voto.</strong>
                         <p />
                         <center>
                           <Link
@@ -192,43 +192,45 @@ export default class Voting extends Component {
                               textDecoration: "underline",
                             }}
                           >
-                            See Results
+                            Ver Resultados
                           </Link>
                         </center>
                       </div>
                     </div>
                   ) : (
                     <div className="container-item info">
-                      <center>Go ahead and cast your vote.</center>
+                      <center>Emite tu voto</center>
                     </div>
                   )
                 ) : (
                   <div className="container-item attention">
-                    <center>Please wait for admin to verify.</center>
+                    <center>Por favor espera verificacion del administrador.</center>
                   </div>
                 )
               ) : (
                 <>
                   <div className="container-item attention">
                     <center>
-                      <p>You're not registered. Please register first.</p>
+                      <p>Usted no se ha registrado, porfavor registrese primero</p>
                       <br />
                       <Link
                         to="/Registration"
                         style={{ color: "black", textDecoration: "underline" }}
                       >
-                        Registration Page
+                        Ir a Pagina de Registro
                       </Link>
                     </center>
                   </div>
                 </>
               )}
               <div className="container-main">
-                <h2>Candidates</h2>
-                <small>Total candidates: {this.state.candidates.length}</small>
+                <h2><center>Candidatos</center></h2>
+                <center>
+                <small>Total candidatos: {this.state.candidates.length}</small>
+                </center>
                 {this.state.candidates.length < 1 ? (
                   <div className="container-item attention">
-                    <center>Not one to vote for.</center>
+                    <center>Nadie por quien Votar.</center>
                   </div>
                 ) : (
                   <>
@@ -237,7 +239,7 @@ export default class Voting extends Component {
                       className="container-item"
                       style={{ border: "1px solid black" }}
                     >
-                      <center>That is all.</center>
+                      <center>Fin de Lista</center>
                     </div>
                   </>
                 )}
@@ -247,13 +249,13 @@ export default class Voting extends Component {
             <>
               <div className="container-item attention">
                 <center>
-                  <h3>The Election ended.</h3>
+                  <h3>La eleccion ha terminado.</h3>
                   <br />
                   <Link
                     to="/Results"
                     style={{ color: "black", textDecoration: "underline" }}
                   >
-                    See results
+                    Ver resultados
                   </Link>
                 </center>
               </div>

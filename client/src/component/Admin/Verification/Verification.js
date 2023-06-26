@@ -104,9 +104,9 @@ export default class Registration extends Component {
             <p style={{ margin: "7px 0px" }}>AC: {voter.address}</p>
             <table>
               <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Voted</th>
+                <th>Nombre Completo</th>
+                <th>Telefono</th>
+                <th>Estado Voto</th>
               </tr>
               <tr>
                 <td>{voter.name}</td>
@@ -152,7 +152,7 @@ export default class Registration extends Component {
               disabled={voter.isVerified}
               onClick={() => verifyVoter(true, voter.address)}
             >
-              Approve
+              Aprobar Registro
             </button>
           </div>
         </div>
@@ -183,7 +183,7 @@ export default class Registration extends Component {
           <h3>Verificacion</h3>
           <small>Total Votantes: {this.state.voters.length}</small>
           {this.state.voters.length < 1 ? (
-            <div className="container-item info">Nadie se ha reistrado aun</div>
+            <div className="container-item info">Nadie se ha registrado aun</div>
           ) : (
             <>
               <div className="container-item info">

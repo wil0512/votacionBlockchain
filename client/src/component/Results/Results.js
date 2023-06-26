@@ -114,15 +114,15 @@ export default class Result extends Component {
           ) : this.state.isElStarted && !this.state.isElEnded ? (
             <div className="container-item attention">
               <center>
-                <h3>The election is being conducted at the movement.</h3>
-                <p>Result will be displayed once the election has ended.</p>
-                <p>Go ahead and cast your vote {"(if not already)"}.</p>
+                <h3>La eleccion se esta llevando acabo en este momento</h3>
+                <p>Los resultados seran mostrados una vez la eleccion finalize.</p>
+                <p>Emite tu voto {"(si aun no lo hiciste)"}.</p>
                 <br />
                 <Link
                   to="/Voting"
                   style={{ color: "black", textDecoration: "underline" }}
                 >
-                  Voting Page
+                  Ir a pagina de Votacion
                 </Link>
               </center>
             </div>
@@ -154,12 +154,12 @@ function displayWinner(candidates) {
     return (
       <div className="container-winner">
         <div className="winner-info">
-          <p className="winner-tag">Winner!</p>
+          <p className="winner-tag">Ganador!!</p>
           <h2> {winner.header}</h2>
           <p className="winner-slogan">{winner.slogan}</p>
         </div>
         <div className="winner-votes">
-          <div className="votes-tag">Total Votes: </div>
+          <div className="votes-tag">Total Votos a favor: </div>
           <div className="vote-count">{winner.voteCount}</div>
         </div>
       </div>
@@ -185,11 +185,11 @@ export function displayResults(candidates) {
         <div className="container-main">{displayWinner(candidates)}</div>
       ) : null}
       <div className="container-main" style={{ borderTop: "1px solid" }}>
-        <h2>Results</h2>
-        <small>Total candidates: {candidates.length}</small>
+        <h2>Resultados Votacion</h2>
+        <small>Total candidatos: {candidates.length}</small>
         {candidates.length < 1 ? (
           <div className="container-item attention">
-            <center>No candidates.</center>
+            <center>No hay candidatos.</center>
           </div>
         ) : (
           <>
@@ -197,8 +197,8 @@ export function displayResults(candidates) {
               <table>
                 <tr>
                   <th>Id</th>
-                  <th>Candidate</th>
-                  <th>Votes</th>
+                  <th>Candidato</th>
+                  <th>Votos a favor</th>
                 </tr>
                 {candidates.map(renderResults)}
               </table>
@@ -207,7 +207,7 @@ export function displayResults(candidates) {
               className="container-item"
               style={{ border: "1px solid black" }}
             >
-              <center>That is all.</center>
+              <center>Fin Resultados</center>
             </div>
           </>
         )}

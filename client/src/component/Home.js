@@ -138,7 +138,7 @@ export default class Home extends Component {
                 {this.state.isAdmin ? (
                   <p>Configure la eleccion</p>
                 ) : (
-                  <p>Please wait..</p>
+                  <p>Porfavor espere..</p>
                 )}
               </center>
             </div>
@@ -156,13 +156,13 @@ export default class Home extends Component {
           <>
             <div className="container-item attention">
               <center>
-                <h3>The Election ended.</h3>
+                <h3>La eleccion ha finalizado.</h3>
                 <br />
                 <Link
                   to="/Results"
                   style={{ color: "black", textDecoration: "underline" }}
                 >
-                  See results
+                  Ver resultados
                 </Link>
               </center>
             </div>
@@ -201,7 +201,7 @@ export default class Home extends Component {
                     <div>
                       <label className="label-home">
                         Nombre Completo{" "}
-                        {errors.adminFName && <EMsg msg="*required" />}
+                        {errors.adminFName && <EMsg msg="*Requerido" />}
                         <input
                           className="input-home"
                           type="text"
@@ -228,7 +228,7 @@ export default class Home extends Component {
                           placeholder="you@ejemplo.com"
                           name="adminEmail"
                           {...register("adminEmail", {
-                            required: "*Required",
+                            required: "*Requerido",
                             pattern: {
                               value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, // email validation using RegExp
                               message: "*Invalid",
@@ -239,7 +239,7 @@ export default class Home extends Component {
 
                       <label className="label-home">
                         PuestoDeTrabajo {" "}
-                        {errors.adminTitle && <EMsg msg="*required" />}
+                        {errors.adminTitle && <EMsg msg="*Requerido" />}
                         <input
                           className="input-home"
                           type="text"
@@ -259,7 +259,7 @@ export default class Home extends Component {
                     <div>
                       <label className="label-home">
                         Titulo Eleccion{" "}
-                        {errors.electionTitle && <EMsg msg="*required" />}
+                        {errors.electionTitle && <EMsg msg="*Requerido" />}
                         <input
                           className="input-home"
                           type="text"
@@ -271,7 +271,7 @@ export default class Home extends Component {
                       </label>
                       <label className="label-home">
                         Nombre de Organizacion{" "}
-                        {errors.organizationName && <EMsg msg="*required" />}
+                        {errors.organizationName && <EMsg msg="*Requerido" />}
                         <input
                           className="input-home"
                           type="text"

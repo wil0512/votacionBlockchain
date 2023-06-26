@@ -126,7 +126,7 @@ export default class AddCandidate extends Component {
           <div className="container-item">
             <form className="form">
               <label className={"label-ac"}>
-                Nombre Sigla
+                Nombre Candidato
                 <input
                   className={"input-ac"}
                   type="text"
@@ -136,7 +136,7 @@ export default class AddCandidate extends Component {
                 />
               </label>
               <label className={"label-ac"}>
-                Slogan
+                Sigla - Slogan
                 <input
                   className={"input-ac"}
                   type="text"
@@ -152,7 +152,7 @@ export default class AddCandidate extends Component {
                 }
                 onClick={this.addCandidate}
               >
-                Add
+                Agregar
               </button>
             </form>
           </div>
