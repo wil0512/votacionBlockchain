@@ -187,11 +187,11 @@ export default class Registration extends Component {
                   </div>
                   <div className="div-li">
                     <label className={"label-r"}>
-                      Telefono <span style={{ color: "tomato" }}>*</span>
+                      Carnet <span style={{ color: "tomato" }}>*</span>
                       <input
                         className={"input-r"}
                         type="number"
-                        placeholder="Ej: 59177777777"
+                        placeholder="Ej: 1234567"
                         value={this.state.voterPhone}
                         onChange={this.updateVoterPhone}
                       />
@@ -199,12 +199,12 @@ export default class Registration extends Component {
                   </div>
                   <p className="note">
                     <span style={{ color: "tomato" }}> Aviso: </span>
-                    <br /> Verifique que su Direccion de Billetera Electronica, Nombre Completo y Numero de telefono sean correctos.<br />
+                    <br /> Verifique que su Direccion de Billetera Electronica, Nombre Completo y Numero de Carnet sean correctos.<br />
                   </p>
                   <button
                     className="btn-add"
                     disabled={
-                      this.state.voterPhone.length !== 11 ||
+                      this.state.voterPhone.length <= 6 ||
                       this.state.currentVoter.isVerified
                     }
                     onClick={this.registerAsVoter}
@@ -265,7 +265,7 @@ export function loadCurrentVoter(voter, isRegistered) {
             <td>{voter.name}</td>
           </tr>
           <tr>
-            <th>Telefono</th>
+            <th>Carnet</th>
             <td>{voter.phone}</td>
           </tr>
           <tr>
@@ -300,7 +300,7 @@ export function loadAllVoters(voters) {
               <td>{voter.name}</td>
             </tr>
             <tr>
-              <th>Telefono</th>
+              <th>Carnet</th>
               <td>{voter.phone}</td>
             </tr>
             <tr>

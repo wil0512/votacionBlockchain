@@ -26,16 +26,16 @@ export default function NavbarAdmin() {
             Candidatos
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to="/Registration" activeClassName="nav-active">
             <i className="far fa-registered" /> Registros
           </NavLink>
-        </li>
+        </li> 
         <li>
           <NavLink to="/Voting" activeClassName="nav-active">
             <i className="fas fa-vote-yea" /> Votacion
           </NavLink>
-        </li>
+        </li>*/}
         <li>
           <NavLink to="/Results" activeClassName="nav-active">
             <i className="fas fa-poll-h" /> Resultados

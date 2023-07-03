@@ -105,7 +105,7 @@ export default class Registration extends Component {
             <table>
               <tr>
                 <th>Nombre Completo</th>
-                <th>Telefono</th>
+                <th>Carnet</th>
                 <th>Estado Voto</th>
               </tr>
               <tr>
@@ -122,27 +122,27 @@ export default class Registration extends Component {
         >
           <table>
             <tr>
-              <th>Account address</th>
+              <th>DireccionBilletera-E </th>
               <td>{voter.address}</td>
             </tr>
             <tr>
-              <th>Name</th>
+              <th>Nombre</th>
               <td>{voter.name}</td>
             </tr>
             <tr>
-              <th>Phone</th>
+              <th>Carnet</th>
               <td>{voter.phone}</td>
             </tr>
             <tr>
-              <th>Voted</th>
+              <th>EstadoVoto</th>
               <td>{voter.hasVoted ? "True" : "False"}</td>
             </tr>
             <tr>
-              <th>Verified</th>
+              <th>Verificacion</th>
               <td>{voter.isVerified ? "True" : "False"}</td>
             </tr>
             <tr>
-              <th>Registered</th>
+              <th>Registrado</th>
               <td>{voter.isRegistered ? "True" : "False"}</td>
             </tr>
           </table>
